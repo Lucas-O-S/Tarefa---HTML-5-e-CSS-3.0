@@ -4,6 +4,10 @@ h1{
 
 }
 
+h1 + p{
+    text-indent: 0;
+}
+
 h2{
     margin-top: 30px;
     border-bottom: 2px solid #333333;
@@ -12,6 +16,18 @@ h2{
 p { 
     padding: 0 45px;
     text-indent: 15 px;
+}
+
+p::first-letter{
+    font-weight: bold;
+}
+
+p::first-line{
+    font-variant: small-caps;
+}
+
+:not(p)+ p::first-line{
+    font-variant: small-caps;
 }
 
 figure{
